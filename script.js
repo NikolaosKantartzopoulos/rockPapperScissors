@@ -35,7 +35,7 @@ function game() {
     for (let i = 0; i < 5; i++) {
         score_div_dom.textContent = `${score[0]}` + " - " + `${score[1]}`
         let res = playRound(getComputerChoice());
-        console.log(res);
+        board_div_dom.textContent = res;
         if (res[4] == 'W') {score[0]++;}
         else if (res[4] == 'L') {score[1]++};
         console.log(score);
@@ -46,11 +46,23 @@ function game() {
 
 //Placeholder div
 score_div_dom = document.getElementById('score_div');
-
+board_div_dom = document.getElementById('board_div');
 
 new_game_btn = document.getElementById('menu');
 new_game_btn.addEventListener('click',game)
+
+//Button div
 btn_rock = document.getElementById('b_rock')
 btn_rock.addEventListener('click', ()=> {
     btn_rock.style.backgroundColor = 'red'
+})
+
+btn_scissors = document.getElementById('b_paper')
+btn_scissors.addEventListener('click', ()=> {
+    btn_scissors.style.backgroundColor = 'violet'
+})
+
+btn_paper = document.getElementById('b_scissors')
+btn_paper.addEventListener('click', ()=> {
+    btn_paper.style.backgroundColor = 'coral'
 })
