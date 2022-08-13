@@ -1,45 +1,23 @@
-<script>
-    const computerSelection = getComputerChoice();
-    function getComputerChoice () {
-        ch = Math.floor(Math.random() * 3);
-        if (ch == 0) {return "Rock"}
-        else if (ch ==1) {return "Papper"}
-        else return "Scissors";
-        return false;
-    }
-    function playRound(computerSelection) {
-        do {
-            playerSelection = prompt("(R)ock - (P)apper - (S)cissors");
-        } while (!playerSelection.match(/[rpsRPS]{1}/));
-        if (playerSelection == 'r' || playerSelection == 'R') {playerSelection = "Rock"};
-        if (playerSelection == 's' || playerSelection == 'S') {playerSelection = "Scissors"};
-        if (playerSelection == 'p' || playerSelection == 'P') {playerSelection = "Papper"};
-        console.log(`Player: ${playerSelection}  vs  Computer: ${computerSelection}`);
-
-        let pl_w = `You Win! ${playerSelection} beats ${computerSelection}`;
-        let cp_w = `You Lose! ${computerSelection} beats ${playerSelection}`;
-        let tie = "It's a tie!";
-        if (playerSelection == "Rock" && computerSelection == "Papper" ||
-                playerSelection == "Papper" && computerSelection == "Scissors" ||
-            playerSelection == "Scissors" && computerSelection == "Rock" ) 
-            {return cp_w;}
-        else if (playerSelection == "Rock" && computerSelection == "Scissors" ||
-                playerSelection == "Papper" && computerSelection == "Rock" ||
-            playerSelection == "Scissors" && computerSelection == "Papper")
-            {return pl_w}
-        else return tie;
-    }
-    function game() {
-        console.log("Start game()");
-        let score = [0,0];
-        for (let i = 0; i < 5; i++) {
-            let res = playRound(getComputerChoice());
-            console.log(res);
-            if (res[4] == 'W') {score[0]++;}
-            else if (res[4] == 'L') {score[1]++};
-            console.log(score);
-        }
-        console.log(`Final score: ${score}`);
-    }
-    game();
-</script>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <div id="menu" class="fl_item">New Game</div>
+      <div id="board" class="fl_item">0 - 0</div>
+      <div id="but_div" class="fl_item">
+        <button id="b_rock">Rock</button>
+        <button id="b_paper">Paper</button>
+        <button id="scissors">Scissors</button>
+      </div>
+      <div id="score_div" class="fl_item">Placeholder</div>
+    </main>
+  </body>
+  <script src="script.js"></script>
+</html>
