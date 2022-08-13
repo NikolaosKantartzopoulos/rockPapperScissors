@@ -33,6 +33,7 @@ function game() {
     console.log("Start game()");
     let score = [0,0];
     for (let i = 0; i < 5; i++) {
+        score_div_dom.textContent = `${score[0]}` + " - " + `${score[1]}`
         let res = playRound(getComputerChoice());
         console.log(res);
         if (res[4] == 'W') {score[0]++;}
@@ -41,6 +42,10 @@ function game() {
     }
     console.log(`Final score: ${score}`);
 }
+
+
+//Placeholder div
+score_div_dom = document.getElementById('score_div');
 
 
 new_game_btn = document.getElementById('menu');
