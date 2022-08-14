@@ -10,5 +10,5 @@ main{height: 500px;
 }
 
 button{width: 150px;height: 150px;}
-#menu{background-color: rgba(26,26,26,255);font-size: 4em; text-align: center;padding: 3%; border: 2px solid rgb(0, 136, 255); border-radius: 10%;}
+#menu{background-color: rgba(26,26,26,255);font-size: 4em; text-align: center;padding: 3%; border: 2px solid rgb(0, 136, 255); border-radius: 10%; margin-top: 5%;}
 #img_sel_div{display: flex;flex-flow: row wrap; justify-content: space-around;}
