@@ -12,8 +12,8 @@ function playRound(computerSelection, playerSelection) {
   console.log(`Player: ${playerSelection}  vs  Computer: ${computerSelection}`);
 
   let result_of_round = "";
-  let pl_w = `You Win! ${playerSelection} beats ${computerSelection}`;
-  let cp_w = `You Lose! ${computerSelection} beats ${playerSelection}`;
+  let pl_w = `You Win!`;
+  let cp_w = `You Lose!`;
   let tie = "It's a tie!";
   if (
     (playerSelection == "Rock" && computerSelection == "Paper") ||
@@ -30,12 +30,23 @@ function playRound(computerSelection, playerSelection) {
   } else result_of_round = tie;
   //update score and board
   board_div_dom.textContent = result_of_round;
+  //getElementById('description_div').textContent =
   if (result_of_round[4] == "W") {
     score[0]++;
   } else if (result_of_round[4] == "L") {
     score[1]++;
   }
   score_div_dom.textContent = `${score[0]}` + " - " + `${score[1]}`;
+  if (score[0] == 5) {
+    score_div_dom.style.color = "red";
+    board_div_dom.textContent = "Player wins";
+    document.getElementById("img_sel_div").style.display = "none";
+  }
+  if (score[1] == 5) {
+    score_div_dom.style.color = "blue";
+    board_div_dom.textContent = "Computer wins";
+    document.getElementById("img_sel_div").style.display = "none";
+  }
 }
 
 //-----------------------Placeholder div-----------------------
@@ -48,22 +59,23 @@ new_game_btn.addEventListener("click", () => {
   score = [0, 0];
   console.log("Start New Game");
   score_div_dom.textContent = `${score[0]}` + " - " + `${score[1]}`;
+  document.getElementById("img_sel_div").style =
+    "display: flex;flex-flow: row wrap; justify-content: space-around;";
+  board_div_dom.textContent = "Go!";
+  score_div_dom.style.color = "white";
 });
 //-----------------------Button div-----------------------
 btn_rock = document.getElementById("b_rock");
 btn_rock.addEventListener("click", () => {
-  btn_rock.style.backgroundColor = "red";
   playRound(getComputerChoice(), "Rock");
 });
 
 btn_scissors = document.getElementById("b_paper");
 btn_scissors.addEventListener("click", () => {
-  btn_scissors.style.backgroundColor = "violet";
   playRound(getComputerChoice(), "Paper");
 });
 
 btn_paper = document.getElementById("b_scissors");
 btn_paper.addEventListener("click", () => {
-  btn_paper.style.backgroundColor = "coral";
   playRound(getComputerChoice(), "Scissors");
 });
