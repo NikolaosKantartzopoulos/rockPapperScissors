@@ -1,14 +1,14 @@
-body{background-color: #222; width: 600px; margin: auto; color: aliceblue;}
-main{height: 500px; border: 1px solid red ;
+body{background-color: rgba(26,26,26,255); width: 80%; margin: auto; color: aliceblue;}
+main{height: 500px;
     display: flex; flex-direction: column; 
     align-items: center; justify-content: space-around;}
 
 .sel_img {width: 30%;}
 #info_div {
-    font-size: 3em;
+    font-size: 4em;
     text-align: center;
 }
 
 button{width: 150px;height: 150px;}
-#menu{background-color: rgb(0, 0, 0);font-size: 4em; text-align: center;}
+#menu{background-color: rgba(26,26,26,255);font-size: 4em; text-align: center;padding: 3%; border: 2px solid rgb(0, 136, 255); border-radius: 10%;}
 #img_sel_div{display: flex;flex-flow: row wrap; justify-content: space-around;}

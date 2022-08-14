@@ -62,7 +62,7 @@ new_game_btn.addEventListener("click", () => {
   document.getElementById("img_sel_div").style =
     "display: flex;flex-flow: row wrap; justify-content: space-around;";
   board_div_dom.textContent = "Go!";
-  score_div_dom.style.color = "white";
+  score_div_dom.style.color = "aliceblue";
 });
 //-----------------------Button div-----------------------
 btn_rock = document.getElementById("b_rock");
