@@ -1,5 +1,5 @@
-body{background-color: rgba(26,26,26,255); width: 80%; margin: auto; color: aliceblue;}
-main{height: 500px;
+body{background-color: rgba(26,26,26,255); width: 80%; margin: auto; color: aliceblue; border: 2px solid rgba(26,26,26,255) ;}
+main{height: 500px; margin-top: 50px;
     display: flex; flex-direction: column; 
     align-items: center; justify-content: space-around;}
 
@@ -10,5 +10,5 @@ main{height: 500px;
 }
 
 button{width: 150px;height: 150px;}
-#menu{background-color: rgba(26,26,26,255);font-size: 4em; text-align: center;padding: 3%; border: 2px solid rgb(0, 136, 255); border-radius: 10%; margin-top: 5%;}
+#menu{background-color: rgba(26,26,26,255);font-size: 4em; text-align: center;padding: 3%; border: 2px solid rgb(0, 136, 255); border-radius: 10%;}
 #img_sel_div{display: flex;flex-flow: row wrap; justify-content: space-around;}
