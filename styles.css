@@ -11,9 +11,7 @@ main{height: 500px; margin-top: 50px;
 @media screen and (max-width: 650px) {
     .flex_for_row div {width: 10vm; font-size: 2em;}
 }
-@media screen and (max-width: 320px) {
-    .flex_for_row div {width: 10vm; font-size: 1em;}
-}
+
 .sel_img {width: 30%;}
 
 #footer_div{font-size: 5em;padding: 0.1em; border-radius: 10%;}
