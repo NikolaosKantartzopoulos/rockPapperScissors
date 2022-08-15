@@ -3,15 +3,19 @@ main{height: 500px; margin-top: 50px;
     display: flex; flex-direction: column; 
     align-items: center; justify-content: space-around;}
 .flex_for_row{
-    display: flex;flex-flow: row; 
+    display: flex; flex-flow: row nowrap; width: 80vw;
     justify-content: space-around; align-items: center;
-    width: 75%;margin:auto;
+}
+.flex_for_row div {width: 20vm;   font-size: 3em;
+    text-align: center;  justify-content: space-around;}
+@media screen and (max-width: 650px) {
+    .flex_for_row div {width: 10vm; font-size: 2em;}
+}
+@media screen and (max-width: 320px) {
+    .flex_for_row div {width: 10vm; font-size: 1em;}
 }
 .sel_img {width: 30%;}
-#info_div {
-    font-size: 4em;
-    text-align: center;
-}
+
 #footer_div{font-size: 5em;padding: 0.1em; border-radius: 10%;}
 button{width: 150px;height: 150px;}
 #menu{background-color: rgba(26,26,26,255);font-size: 4em; text-align: center;padding: 3%; border: 2px solid rgb(0, 136, 255); border-radius: 10%;}
