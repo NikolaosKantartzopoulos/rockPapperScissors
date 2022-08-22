@@ -1,36 +1,36 @@
-body{background-color: rgba(26,26,26,255); width: 80%; margin: auto; color: aliceblue; border: 2px solid rgba(26,26,26,255); padding: 20px;}
-main{height: 500px; margin-top: 50px;
-    display: flex; flex-direction: column; 
-    align-items: center; justify-content: space-around;}
+body{background-color: rgba(26,26,26,255); width: 100vw; height: 80vh;
+    margin:  auto; color: aliceblue; 
+    border: 2px solid rgba(26,26,26,255); }
+*{font-size: clamp(1vh,2vh,3vh);}
+main{height: 80vh; margin-top: 10px; display: flex; flex-flow: column;justify-content: space-around; align-items: center;
+}
+
+
 .flex_for_row{
-    display: flex; flex-flow: row nowrap; width: 80vw;
-    justify-content: space-around; align-items: center;
+    display: flex; flex-flow: row nowrap; width: 90vw;
+    justify-content: space-around; align-items: center; margin: auto;
 }
-.flex_for_row div {width: 20vm;   font-size: 3em;
+.flex_for_row div {width: 30vw;   font-size: 2em;
     text-align: center;  justify-content: space-around;}
-@media screen and (max-width: 650px) {
-    .flex_for_row div {width: 10vm; font-size: 2em;}
-}
 
-.sel_img {width: 30%;}
 
-#footer_div{font-size: 5em;padding: 0.1em; border-radius: 10%;}
-button{width: 150px;height: 150px;}
-#menu{background-color: rgba(26,26,26,255);font-size: 4em; text-align: center;padding: 3%; border: 2px solid rgb(0, 136, 255); border-radius: 10%;}
-#img_sel_div{border: 2px solid rgb(0, 136, 255); border-radius: 3%; margin-top: 4%;
-    display: flex;flex-flow: row wrap; justify-content: space-around;}
+
+
+#menu{background-color: rgba(26,26,26,255);font-size: 4em; text-align: center;padding: 3%; 
+    border: 2px solid rgb(0, 136, 255); border-radius: 10%;}
+
 
 
 #board_div{display: flex;flex-flow: row; 
     justify-content: space-around; align-items: center;
-    width: 75%;margin:auto; opacity: 0;}
+    width: 100vw;margin:auto; opacity: 0;}
+#board_div img{width: clamp(100px, min(20vh,25vw),20vh); height: clamp(100px, min(20vh,25vw),20vh);}
 
-/*Moves*/
+#vs_div{width: 10vw;}
 
-@keyframes rotate_img {
-    0%{rotate: 0deg;}
-    50%{rotate: 360deg;
-    opacity: 0;}
-}
+#img_sel_div{border: 2px solid rgb(0, 136, 255); border-radius: 3%; margin-top: 4%;
+    display: flex;flex-flow: row wrap; justify-content: space-around; height: 40vh;}
 
+.sel_img {width: clamp(100px, 20vh,20vh); height: clamp(100px,20vh,20vh);}
 
+#footer_div{font-size: 5em;padding: 0.1em; border-radius: 10%;}

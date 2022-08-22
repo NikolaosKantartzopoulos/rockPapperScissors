@@ -89,6 +89,8 @@ new_game_btn.addEventListener("click", () => {
   document.getElementById("footer_div").textContent = "";
   document.getElementById("footer_div").style.backgroundColor =
     "rgba(26,26,26,255)";
+  document.getElementById("board_div").style =
+    "display: flex;flex-flow: row wrap; justify-content: space-around;";
 });
 //-----------------------Button div-----------------------
 btn_rock = document.getElementById("b_rock");

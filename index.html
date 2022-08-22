@@ -9,32 +9,38 @@
   </head>
   <body>
     <main>
-      <div id="menu" class="fl_item">New Game</div>
+      <div id="menu">New Game</div>
       <div id="info_div" class="fl_item">
         <!--Score-->
-        <div class="flex_for_row" style="position: relative; left: 4%">
+        <div class="flex_for_row">
           <div style="color: red">Player</div>
-          <div id="score_div" style="">0 - 0</div>
+          <div id="score_div">0 - 0</div>
           <div style="color: blue">Machine</div>
         </div>
         <!--Board-->
         <div id="board_div">
           <img id="pl_selection_icon" src="Paper.png" class="sel_img" />
-          <span id="vs_div">
-            <span style="color: red; font-size: 4.2em">V</span>
-            <span style="color: blue; font-size: 4.2em">S</span>
+          <span
+            id="vs_div"
+            class="flex_for_row"
+            style="justify-content: center; margin: auto 0vw"
+          >
+            <span style="color: red; font-size: clamp(5vh, 10vh, 10vh)">V</span>
+            <span style="color: blue; font-size: clamp(5vh, 10vh, 10vh)"
+              >S</span
+            >
           </span>
           <img id="pc_selection_icon" src="Paper.png" class="sel_img" />
         </div>
         <div id="description_div"></div>
       </div>
       <!--Select-->
-      <div id="img_sel_div" class="fl_item">
+      <div id="img_sel_div" class="flex_for_row">
         <img src="Rock.png" id="b_rock" class="sel_img" />
         <img src="Paper.png" id="b_paper" class="sel_img" />
         <img src="Scissors.png" id="b_scissors" class="sel_img" />
       </div>
-      <div id="footer_div" class="fl_item"></div>
+      <div id="footer_div"></div>
     </main>
   </body>
   <script src="script.js"></script>
