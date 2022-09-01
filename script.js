@@ -61,7 +61,7 @@ function player_wins_end() {
 
 function computer_wins_end() {
   score_div_dom.style.color = "blue";
-  document.getElementById("footer_div").textContent = "Computer wins";
+  document.getElementById("footer_div").textContent = "Machine wins";
   document.getElementById("img_sel_div").style.display = "none";
   board_div_dom.style.display = "none";
   document.getElementById("footer_div").style.backgroundColor = "blue";
